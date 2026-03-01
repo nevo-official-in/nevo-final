@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { useSearchParams, Link } from 'react-router-dom';
 import { CheckCircle, Loader, AlertTriangle, RefreshCw } from 'lucide-react';
 import { useCartStore } from '../store/cartStore';

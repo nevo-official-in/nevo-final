@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCartStore } from '../store/cartStore';
 import { toast } from 'sonner';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Lock, CreditCard, Package, Truck } from 'lucide-react';
+
 
 export const Checkout = () => {
   const navigate = useNavigate();

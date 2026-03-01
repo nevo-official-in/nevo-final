@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCartStore } from '../store/cartStore';
 import { toast } from 'sonner';
 import { QuickViewModal } from '../components/QuickViewModal';
+import { Helmet } from 'react-helmet-async';
 
 // Safe slug creator
 const createSlug = (id) => {

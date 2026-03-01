@@ -1,38 +1,70 @@
-/* 1. SARI IMPORTS SABSE UPAR BINAA KISI COMMENT KE */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@100;200;400&display=swap');
-@import "tailwindcss";
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* 2. THEME CONFIGURATION */
-@theme {
-  --font-serif: "Cormorant Garamond", serif;
-  --font-sans: "Inter", sans-serif;
+/* Custom Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-black text-white antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  }
+  
+  ::selection {
+    @apply bg-red-600 text-white;
+  }
 }
 
-/* 3. GLOBAL STYLES */
-html, body {
-  background-color: #000000;
-  color: white;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-  font-family: var(--font-sans);
+/* Custom Component Styles */
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-white text-black font-medium uppercase tracking-wider 
+           hover:bg-gray-200 transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-4 border border-white text-white font-medium uppercase tracking-wider 
+           hover:bg-white hover:text-black transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-transparent border border-white/20 
+           focus:border-white focus:outline-none transition-colors duration-300;
+  }
 }
 
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Custom Utility Styles */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
 }
 
-/* Scrollbar styling (Nevo Aesthetic) */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #000;
+  @apply bg-black;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #ffffff;
+  @apply bg-white/20;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/40;
 }

@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCartStore } from '../store/cartStore';
 import { fetchProduct, getProductSlug } from '../lib/api';
+import { Helmet } from 'react-helmet-async';
 import { toast } from 'sonner';
 import { Heart, Share2, ChevronDown, ChevronUp, Minus, Plus } from 'lucide-react';
 

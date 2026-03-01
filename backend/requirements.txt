@@ -1,7 +1,20 @@
+# FastAPI Framework
 fastapi==0.110.1
-uvicorn==0.25.0
+uvicorn[standard]==0.25.0
+
+# Environment Variables
 python-dotenv==1.0.1
+
+# MongoDB (Async + Sync)
 motor==3.3.1
 pymongo==4.5.0
+
+# Data Validation (Pydantic v2)
 pydantic==2.6.4
+pydantic[email]==2.6.4  # ✅ EmailStr ke liye zaroori
+
+# File Uploads
 python-multipart==0.0.9
+
+# Email Validation (explicit)
+email-validator==2.1.1 
